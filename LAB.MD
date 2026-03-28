@@ -76,6 +76,26 @@ Depende da operação matemática envolvida:
 | Desvio padrão | $\sqrt{(0{,}05^2+0{,}05^2+0)/2}$ | $0{,}05$ mL |
 | Erro total (proveta) | $\sqrt{0{,}05^2 + 0{,}05^2}$ | $\approx 0{,}07$ mL |
 | **Volume final** | | $(1{,}15 \pm 0{,}07)$ mL |
-| Densidade $\rho = m/V$ | erro relativo dominado pela proveta | $\approx 6{,}1\%$ de incerteza |
+
+**Calculando a densidade e sua incerteza:**
+
+$$\rho = \frac{m}{V} = \frac{3{,}211}{1{,}15} \approx 2{,}79 \text{ g/mL}$$
+
+Aplicando a propagação para divisão (erro relativo):
+
+$$\frac{\Delta\rho}{\rho} = \sqrt{\left(\frac{\Delta m}{m}\right)^2 + \left(\frac{\Delta V}{V}\right)^2} = \sqrt{\left(\frac{0{,}001}{3{,}211}\right)^2 + \left(\frac{0{,}07}{1{,}15}\right)^2}$$
+
+$$\frac{\Delta\rho}{\rho} = \sqrt{(0{,}03\%)^2 + (6{,}1\%)^2} \approx 6{,}1\%$$
+
+Convertendo para erro absoluto:
+
+$$\Delta\rho = \rho \times 6{,}1\% = 2{,}79 \times 0{,}061 \approx 0{,}2 \text{ g/mL}$$
+
+| Grandeza | Erro relativo | Contribuição |
+|---|---|---|
+| Massa $\Delta m / m$ | $0{,}001/3{,}211 \approx 0{,}03\%$ | desprezível |
+| Volume $\Delta V / V$ | $0{,}07/1{,}15 \approx 6{,}1\%$ | dominante |
+
+$$\boxed{\rho = (2{,}8 \pm 0{,}2) \text{ g/mL}}$$
 
 > **Conclusão prática:** nos seus experimentos, o erro da **proveta domina** sobre o da balança — investir em volumetria mais precisa reduz muito mais a incerteza final do que usar uma balança melhor.
