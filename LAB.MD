@@ -33,11 +33,16 @@ $$s_{\bar{x}} = \sqrt{\frac{\sum(x_i - \bar{x})^2}{n(n-1)}} = \frac{s}{\sqrt{n}}
 
 ### 3. Erro Absoluto Total
 
-Combina o **erro instrumental** ($\delta_{inst}$, dado pelo equipamento) com o **desvio padrão** ($s$, das repetições), que são fontes independentes:
+Em medidas com repetições, há **duas fontes independentes de erro** que se combinam em quadratura:
 
 $$\Delta x = \sqrt{\delta_{inst}^2 + s^2}$$
 
-> Se há só 1 medição: $\Delta x = \delta_{inst}$ apenas.
+| Fonte | Origem | Exemplo |
+|---|---|---|
+| $\delta_{inst}$ | Precisão do equipamento (ou propagação de erros) | $\pm 0{,}07$ mL para $V_f - V_i$ |
+| $s$ | Espalhamento estatístico das repetições | desvio padrão das triplicatas |
+
+> Se há só **1 medição**: $\Delta x = \delta_{inst}$ apenas — não existe $s$ para combinar.
 
 ---
 
@@ -96,9 +101,12 @@ Por isso os três volumes deslocados já ficam com $\pm 0{,}07$ mL.
 | Etapa | Cálculo | Resultado |
 |---|---|---|
 | Média do volume | $(1{,}20 + 1{,}10 + 1{,}15)/3$ | $1{,}15$ mL |
-| Desvio padrão | $\sqrt{(0{,}05^2+0{,}05^2+0)/2}$ | $0{,}05$ mL |
-| Erro total (inst. + estat.) | $\sqrt{0{,}07^2 + 0{,}05^2}$ | $\approx 0{,}09$ mL |
+| Desvio padrão ($s$) | $\sqrt{(0{,}05^2+0{,}05^2+0)/2}$ | $0{,}05$ mL |
+| Erro propagado ($\delta_{inst}$) | do Passo 1: $\sqrt{0{,}05^2+0{,}05^2}$ | $0{,}07$ mL |
+| **Erro total** | $\sqrt{\delta_{inst}^2 + s^2} = \sqrt{0{,}07^2 + 0{,}05^2}$ | $\approx 0{,}09$ mL |
 | **Volume final** | | $(1{,}15 \pm 0{,}09)$ mL |
+
+> Aqui combinam-se **duas fontes independentes**: o erro propagado da subtração $V_f - V_i$ (0,07 mL, fixo para cada medição) e o espalhamento estatístico das 3 repetições (0,05 mL). Para Amostras 2–5, como há apenas 1 medição, usa-se somente $\delta_{inst} = \pm 0{,}07$ mL.
 
 **Passo 3 — Calculando a densidade e sua incerteza:**
 
